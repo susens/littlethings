@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xmls="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadeScrollbars="false"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    android:scrollbarFadeDuration="50000"
+    android:scrollbarSize="8dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:background="@drawable/gradient"
+        android:orientation="vertical" >
+
+        <Switch
+            android:id="@+id/switchtheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:onClick="switch_theme"
+            android:text="Switch Theme"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ButtonId"
+                android:onClick="newfiles"
+                android:text="Song Auswahl"
+                android:background = "@drawable/runde_button"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:padding="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/song"
+                android:text="Song" >
+            </TextView>
+
+
+        </LinearLayout>
+
+        <SeekBar
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/simpleSeekBar"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="30dp"
+            android:progressDrawable="@drawable/custom_progress"
+            android:thumb="@drawable/seekbar_thum"
+            android:max="150">
+
+        </SeekBar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/linearContainer">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Start"
+                android:onClick="start"
+                android:background = "@drawable/runde_button"
+                android:id="@+id/start"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="5dp" >
+            </androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Stop"
+                android:onClick="stop"
+                android:id="@+id/stop"
+                android:background = "@drawable/runde_button"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="5dp">
+            </androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Pause"
+                android:onClick="pause"
+                android:id="@+id/pause"
+                android:background = "@drawable/runde_button"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="5dp">
+            </androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Leiser"
+                android:onClick="leiser"
+                android:id="@+id/leiser"
+                android:background = "@drawable/runde_button"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="5dp">
+            </androidx.appcompat.widget.AppCompatButton>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearContainer1"
+            android:orientation="horizontal" >
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Next"
+                android:onClick="next"
+                android:id="@+id/next"
+                android:background = "@drawable/runde_button"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="5dp">
+            </androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Previous"
+                android:onClick="previous"
+                android:id="@+id/previous"
+                android:background = "@drawable/runde_button"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="5dp">
+            </androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/EXIT"
+                android:onClick="exit"
+                android:id="@+id/exit"
+                android:background = "@drawable/runde_button"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="5dp">
+            </androidx.appcompat.widget.AppCompatButton>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Lauter"
+                android:onClick="lauter"
+                android:id="@+id/lauter"
+                android:background = "@drawable/runde_button"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="5dp">
+            </androidx.appcompat.widget.AppCompatButton>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/linearContainer3">
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:id="@+id/relativelayouts">
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient"
+            android:orientation="horizontal">
+            <Spinner
+                style="?android:attr/spinnerItemStyle"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/spinnervisualizer"
+                android:popupBackground="@drawable/gradient"
+                android:layout_marginBottom="10dp" >
+            </Spinner>
+
+            <TextView
+                android:id="@+id/itemTextViewvisualizer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient"
+            android:orientation="horizontal">
+            <Spinner
+                style="?android:attr/spinnerItemStyle"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:popupBackground="@drawable/gradient"
+                android:id="@+id/userlist">
+            </Spinner>
+
+            <TextView
+                android:id="@+id/itemTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
